@@ -20,7 +20,8 @@ PROJECT := $(CURRENT_DIR:$(GOPATH)/src/%=%)
 OWNER := $(notdir $(patsubst %/,%,$(dir $(PROJECT))))
 NAME := $(notdir $(PROJECT))
 EXTERNAL_TOOLS = \
-	github.com/golang/dep/cmd/dep
+	github.com/golang/dep/cmd/dep \
+	github.com/golang/lint/golint
 
 # Current system information
 GOOS ?= $(shell go env GOOS)
